@@ -71,7 +71,7 @@ function QuestionStructure() {
                         <li key={i} >
                             <button
                                 onClick={() => { setActiveOption(i); setCheckBtn({ checked: true, isCorrectAnswer: answer === correctAnswer }) }}
-                                className={`w-full p-2 border-2 rounded-md border-blue-500 hover:bg-blue-500 duration-300  hover:text-white ${activeOption === i ? "bg-blue-500 text-white" : "text-blue-500"} focus:outline-none disabled:bg-gray-500/90 disabled:border-gray-500/90 disabled:text-white`}
+                                className={`w-full p-2 border-2 rounded-md border-blue-500 hover:bg-blue-500 duration-300  hover:text-white ${activeOption === i ? "bg-blue-500 text-white" : "text-blue-500"} focus:outline-none disabled:bg-red-500 disabled:border-red-500 disabled:text-white`}
                                 disabled={hint.IsUsed && (IncorrectAnswers !== null && (answer === IncorrectAnswers[0] || answer === IncorrectAnswers[1]))} // Disable incorrect answers when hint is used
                             >
                                 {decodeHtmlEntities(answer)}
